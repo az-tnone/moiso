@@ -1,28 +1,40 @@
-import ListItem from "./ListItem"; // ListItem 컴포넌트 import
-import "../../style/Home.css"; // CSS 파일 경로 수정
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ListItem from "./ListItem";
+import "../../style/Home.css";
+import Config from "../../config/Config.json";
 
 const Home = () => {
   const navigate = useNavigate();
 
-  // useEffect를 컴포넌트 최상위에서 사용
+  // 로그인 상태를 관리하는 state
+  const [isLogin, setIsLogin] = useState(false);
+
   useEffect(() => {
-    if (!localStorage.getItem("isLogin")) {
-      const isLogin = localStorage.setItem("isLogin", true);
+    // localStorage에서 로그인 상태를 확인
+    const loginStatus = localStorage.getItem("isLogin");
+    if (!loginStatus) {
+      // 만약 로그인 상태가 없다면, 로그인 상태를 true로 설정하고 localStorage에 저장
+      localStorage.setItem("isLogin", true);
+      setIsLogin(true);
+    } else {
+      // 만약 이미 로그인 상태라면, 그 상태를 state에 반영
+      setIsLogin(true);
     }
+
+    // 서버에서 데이터를 가져오는 함수 호출
+    fetchData();
   }, []);
 
-  const onClick = (destinationist) => {
+  const onClick = (destinationist) => () => {
     navigate("/" + destinationist);
   };
 
   const [data, setData] = useState([]);
 
-  // 서버에서 데이터를 가져오는 함수
   const fetchData = async () => {
     try {
-      const response = await fetch("http://192.168.0.114:8080/announce/list"); // 서버의 실제 URL로 교체
+      const response = await fetch(Config.serverUrl + "/announce/list");
       const result = await response.json();
       setData(result);
       console.log(result);
@@ -30,10 +42,6 @@ const Home = () => {
       console.error("데이터를 가져오는데 실패했습니다:", error);
     }
   };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <div className="home-container">
@@ -43,6 +51,12 @@ const Home = () => {
         <span className="login-text" onClick={onClick("login")}>
           로그인
         </span>
+        {/* isLogin이 true일 때만 이미지 버튼을 렌더링 */}
+        {isLogin && (
+          <button className="image-button" onClick={onClick("profile")}>
+            <img src="../../ic_person.svg" alt="" />
+          </button>
+        )}
       </div>
 
       {/* Banner */}
@@ -70,8 +84,7 @@ const Home = () => {
         <ul>
           {data.map((item) => (
             <li key={item.id}>
-              <h2>{item.title}</h2>
-              <p>{item.reword}</p>
+              <ListItem title={item.title} reword={item.reword} />
             </li>
           ))}
         </ul>

@@ -11,7 +11,13 @@ import SignIn1 from "../components/signIn1";
 
 const Router = () => {
   return (
-    <Suspense fallback={<Home />}>
+    <Suspense
+      fallback={
+        <div>
+          <h1>fall</h1>
+        </div>
+      }
+    >
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />

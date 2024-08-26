@@ -47,7 +47,7 @@ const Login = () => {
 
       <div className="divider" />
 
-      <p className="registerText" onClick={() => onClick("Sign1")}>
+      <p className="registerText" onClick={() => onClick("signIn1")}>
         회원가입
       </p>
     </div>
