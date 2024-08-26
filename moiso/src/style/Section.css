@@ -1,0 +1,24 @@
+.section {
+    margin: 16px 23px;
+  }
+  
+  .sectionTitle {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .sectionName,
+  .sectionTel {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .sectionContent {
+    font-size: 20px;
+    color: #979797;
+  }
+  
+  .caution .sectionTitle {
+    color: #FF4848;
+  }
+  
