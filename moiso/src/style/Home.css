@@ -1,95 +1,94 @@
 .home-container {
-    padding: 16px;
-    background-color: #ffffff;
-  }
-  
-  .toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #000;
-    margin-bottom: 16px;
-  }
-  
-  .title {
-    font-size: 32px;
-    font-family: 'Pretendard Medium', sans-serif;
-    background: linear-gradient(-45deg, #ffbec8, #5cbf84);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  
-  .login-text {
-    font-size: 20px;
-    font-family: 'Pretendard Medium', sans-serif;
-    margin-right: 23px;
-  }
-  
-  .banner {
-    position: relative;
-    height: 200px;
-    margin-top: 18px;
-    margin-left: 13px;
-    margin-right: 13px;
-  }
-  
-  .banner-image {
-    width: 100%;
-    height: 100%;
-    background-color: #c0c0c0;
-    border-radius: 10px;
-    border: 3px solid #000;
-  }
-  
-  .indicator {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .divider {
-    width: 100%;
-    height: 7px;
-    background-color: #f0f0f0;
-    margin: 16px 0;
-  }
-  
-  .login-button {
-    width: calc(100% - 44px);
-    height: 67px;
-    margin: 23px 22px 0 22px;
-    background-color: #000;
-    color: #fff;
-    font-size: 20px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .login-button:hover {
-    background-color: #333;
-  }
-  
-  .content-title {
-    margin-top: 16px;
-    margin-left: 30px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .list {
-    margin-top: 16px;
-    background-color: #f0f0f0;
-    padding: 16px;
-    border-radius: 4px;
-    min-height: 200px;
-    /* 리스트 아이템 스타일은 여기에 추가하세요 */
-  }
-  
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 32px;
+  font-family: "Pretendard Medium", sans-serif;
+  background: linear-gradient(-45deg, #ffbec8, #5cbf84);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.login-text {
+  font-size: 20px;
+  font-family: "Pretendard Medium", sans-serif;
+  margin-right: 23px;
+}
+
+.banner {
+  position: relative;
+  height: 200px;
+  margin-top: 18px;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  background-color: #c0c0c0;
+  border-radius: 10px;
+  border: 3px solid #000;
+}
+
+.indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  width: 100%;
+  height: 7px;
+  background-color: #f0f0f0;
+  margin: 16px 0;
+}
+
+.login-button {
+  width: calc(100% - 44px);
+  height: 67px;
+  margin: 23px 22px 0 22px;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #333;
+}
+
+.content-title {
+  margin-top: 16px;
+  margin-left: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.list {
+  margin-top: 16px;
+  background-color: #f0f0f0;
+  padding: 16px;
+  border-radius: 4px;
+  min-height: 200px;
+  /* 리스트 아이템 스타일은 여기에 추가하세요 */
+}
