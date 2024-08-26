@@ -14,7 +14,7 @@ const Login = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React a
         </a>
       </header>
     </div>

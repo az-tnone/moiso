@@ -1,8 +1,7 @@
-import React from "react";
-import "../../style/UploadArticle.css"; // CSS 파일 경로 수정
+import React from 'react';
+import '../../style/UploadArticle.css'; // CSS 파일 경로 수정
 
-function UploadArticle() {
-  // 컴포넌트 이름 변경
+function UploadArticle() { // 컴포넌트 이름 변경
   return (
     <div className="container">
       {/* Toolbar */}
@@ -10,7 +9,7 @@ function UploadArticle() {
         <img
           src="/path/to/your/ic_arrow_14.png"
           alt="Back"
-          style={{ transform: "rotate(180deg)" }}
+          style={{ transform: 'rotate(180deg)' }}
         />
         <h1 className="toolbarTitle">test</h1>
       </div>
@@ -61,9 +60,7 @@ function UploadArticle() {
 
       {/* Caution Section */}
       <div className="section">
-        <label className="label" style={{ color: "#FF4848" }}>
-          주의사항
-        </label>
+        <label className="label" style={{ color: '#FF4848' }}>주의사항</label>
         <input
           type="text"
           placeholder="일에 있어 주의사항을 적어주세요."
