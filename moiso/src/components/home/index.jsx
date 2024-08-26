@@ -1,8 +1,7 @@
 import ListItem from "./ListItem"; // ListItem 컴포넌트 import
 import "../../style/Home.css"; // CSS 파일 경로 수정
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
 
 const Home = () => {
   const navigate = useNavigate();
