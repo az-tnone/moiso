@@ -1,0 +1,78 @@
+.container {
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+}
+
+.toolbarTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 224px;
+  background-color: #c0c0c0;
+  border-radius: 10px;
+  border: 3px solid #000;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  font-size: 18px;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+.submitButtonContainer {
+  margin-top: 32px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 16px;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
