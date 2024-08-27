@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../style/Profile.css";
 
 const Profile = () => {
+  const handleLogout = () => {
+    localStorage.setItem("isLogin", false);
+    navigate("/"); // 로그아웃 후 홈으로 이동
+  };
+
+  const handleDeleteAccount = () => {
+    localStorage.setItem("isLogin", false);
+    // 추가적인 회원 탈퇴 로직 수행
+    navigate("/"); // 탈퇴 후 홈으로 이동
+  };
+
+  useEffect(() => {
+    if (!localStorage.getItem("isLogin")) {
+      localStorage.setItem("isLogin", true);
+    }
+  }, []);
   const userName = "김애용님";
   const ads = [
     {
@@ -86,8 +102,12 @@ const Profile = () => {
       <div className="divider" />
 
       <div className="profile-actions">
-        <p className="logout">로그아웃</p>
-        <p className="delete-account">회원탈퇴</p>
+        <p className="logout" onClick={handleLogout}>
+          로그아웃
+        </p>
+        <p className="delete-account" onClick={handleDeleteAccount}>
+          회원탈퇴
+        </p>
       </div>
 
       <div className="divider" />
